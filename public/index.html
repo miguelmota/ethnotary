@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=yes">
-  <meta name="application-name" content="DocStamp.it">
+  <meta name="application-name" content="ETH Notary">
   <meta name="description" content="Notarize documents online, timestamp, ethereum, blockchain">
   <meta name="keywords" content="notary, online, document, timestamp, ethereum, blockchain, smart contracts">
   <meta name="robots" content="index,follow">
   <meta name="googlebot" content="index,follow">
-  <title>docstamp.it - Notarize your documents on Ethereum</title>
+  <title>ETH Notary - Notarize your documents on Ethereum</title>
   <link rel="canonical" href="https://docstamp.it">
   <link href="/css/style.css" rel="stylesheet">
   <link rel="shortcut icon" href="/favicon.ico">
@@ -24,7 +24,7 @@
 <body>
   <header id="header">
   <h1>
-    <img src="https://user-images.githubusercontent.com/168240/39511732-55b8b16a-4da3-11e8-872d-2497788cca38.png" alt="docstamp.it" width="300" />
+    <img src="https://user-images.githubusercontent.com/168240/49712500-9f217a80-fbf9-11e8-9903-97d57800c2e5.png" alt="ethnotary" width="300" />
     <span>Network: <strong id="networkType">-</strong>
       <br><a id="etherscanLink" href="https://etherscan.io" target="_blank" rel="noopener noreferrer">etherscan</a>&nbsp;|&nbsp;
       <a href="https://github.com/coincircle/docstamp.it" target="_blank" rel="noopener noreferrer">github</a>
@@ -34,7 +34,7 @@
   <div id="formsContainer">
     <form id="stampForm">
       <div class="formTitle">
-        Stamp a Document
+        Notarize a Document
         <small>Notarize your document, to later prove that you cryptographically signed it and had access to it.</small>
       </div>
       <div>
@@ -46,12 +46,12 @@
         <input type="text" readonly id="stampHash">
       </div>
       <div>
-        <button type="submit">Stamp it!</button>
+        <button type="submit">Notarize it!</button>
       </div>
     </form>
     <form id="checkForm">
       <div class="formTitle">
-        Check Stamper of Document
+        Check Notarizer of Document
         <small>See who the signer of the document is.</small>
       </div>
       <div>
@@ -63,10 +63,10 @@
         <input type="text" readonly id="checkHash">
       </div>
       <div>
-        <button type="submit">Check Stamper</button>
+        <button type="submit">Check Notarizer</button>
       </div>
       <div class="formOutput">
-        <label>Stamper <small>The signer of the document.</small></label>
+        <label>Notarizer <small>The signer of the document.</small></label>
         <input type="text" readonly id="checkStamper">
       </div>
       <div>
@@ -76,7 +76,7 @@
     </form>
     <form id="genSigForm">
       <div class="formTitle">
-        Generate Signature to Prove that you Stamped Document
+        Generate Signature to Prove that you Notarized Document
         <small>You can generate a cryptographic signature of the document you notarized to prove to others that you are indeed the signer.</small>
       </div>
       <div>
@@ -106,7 +106,7 @@
         <input type="text" id="verifySigInput">
       </div>
       <div>
-        <button type="submit">Verify Signature of Stamper</button>
+        <button type="submit">Verify Signature of Notarizer</button>
       </div>
       <div class="formOutput">
         <output id="verifySigOut"></output>

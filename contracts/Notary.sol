@@ -2,13 +2,13 @@ pragma solidity ^0.4.4;
 
 import './Ownable.sol';
 
-contract DocStamp is Ownable {
+contract Notary is Ownable {
   mapping (bytes32 => address) public records;
   mapping (bytes32 => uint256) public timestamps;
 
-  event _DocStamped(bytes32 indexed record, address indexed stamper, uint256 timestamp);
+  event LogNotarized(bytes32 indexed record, address indexed notarizer, uint256 timestamp);
 
-  function stamp(bytes32 record) external {
+  function notarize(bytes32 record) external {
     bytes32 hash = keccak256(record);
     require(hash != keccak256(""));
     require(records[hash] == address(0));
@@ -16,7 +16,7 @@ contract DocStamp is Ownable {
     records[hash] = msg.sender;
     timestamps[hash] = block.timestamp;
 
-    _DocStamped(hash, msg.sender, block.timestamp);
+    LogNotarized(hash, msg.sender, block.timestamp);
   }
 
   function exists(bytes32 record) constant returns (bool) {
@@ -24,7 +24,7 @@ contract DocStamp is Ownable {
     return records[hash] != address(0);
   }
 
-  function getStamper(bytes32 record) constant returns (address) {
+  function getNotarizer(bytes32 record) constant returns (address) {
     return records[keccak256(record)];
   }
 
@@ -32,12 +32,12 @@ contract DocStamp is Ownable {
     return timestamps[keccak256(record)];
   }
 
-  function didStamp(bytes32 record) constant returns (bool) {
+  function didNotarize(bytes32 record) constant returns (bool) {
     return records[keccak256(record)] == msg.sender;
   }
 
-  function isStamper(bytes32 record, address stamper) constant returns (bool) {
-    return records[keccak256(record)] == stamper;
+  function isNotarizer(bytes32 record, address notarizer) constant returns (bool) {
+    return records[keccak256(record)] == notarizer;
   }
 
   function ecrecovery(bytes32 hash, bytes sig) public constant returns (address) {

@@ -1,5 +1,5 @@
 {
-  "name": "docstamp",
+  "name": "ethnotary",
   "version": "0.0.1",
   "description": "",
   "main": "truffle.js",
@@ -27,9 +27,12 @@
     "web3-detect-network": "0.0.17"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "babelify": "^10.0.0",
     "browserify": "^14.5.0",
     "buffer": "^5.0.8",
     "truffle-hdwallet-provider": "git+https://github.com/miguelmota/truffle-hdwallet-provider.git",
-    "watchify": "^3.9.0"
+    "watchify": "^3.9.0",
+    "web3-providers-ws": "^1.0.0-beta.37"
   }
 }
