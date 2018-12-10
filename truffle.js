@@ -1,3 +1,4 @@
+const Web3WsProvider = require('web3-providers-ws');
 const HDWalletProvider = require('truffle-hdwallet-provider')
 require('dotenv').config()
 
@@ -6,8 +7,7 @@ const key = process.env.MNEMONIC
 module.exports = {
   networks: {
     development: {
-      host: 'localhost',
-      port: 8545,
+      provider: new Web3WsProvider('ws://localhost:8545'),
       network_id: '*' // Match any network id
     },
     kovan: {

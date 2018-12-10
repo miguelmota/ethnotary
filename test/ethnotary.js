@@ -5,12 +5,12 @@ const Notary = artifacts.require('./Notary.sol')
 
 function getLastEvent(instance) {
   return new Promise((resolve, reject) => {
-    instance.getPastEvents('LogNotarized', {
+    instance.getPastEvents({
       fromBlock: 0,
       toBlock: 'latest'
     }, (error, log) => {
       if (error) return reject(error)
-      resolve(log)
+      resolve(log[0])
     })
   })
 }
@@ -27,8 +27,8 @@ contract('Notary', function(accounts) {
 
       await instance.notarize(hash)
 
-      //const eventObj = await getLastEvent(instance)
-      //assert.equal(eventObj.event, 'LogNotarized')
+      const eventObj = await getLastEvent(instance)
+      assert.equal(eventObj.event, 'LogNotarized')
 
       const notarizer = await instance.getNotarizer(hash)
       assert.equal(notarizer, account)
