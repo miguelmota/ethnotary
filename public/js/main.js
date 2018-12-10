@@ -10,7 +10,7 @@ const Buffer = require('buffer/').Buffer
 const Web3WsProvider = require('web3-providers-ws')
 const arrayBufferToBuffer = require('arraybuffer-to-buffer')
 
-const source = require('../../build/contracts/DocStamp.json')
+const source = require('./NotaryLegacy.json')
 
 let instance = null
 let account = null
