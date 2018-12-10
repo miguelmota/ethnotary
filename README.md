@@ -8,7 +8,7 @@
 
 > Document notarization on the [Ethereum](https://ethereum.org/) blockchain.
 
-<a href="https://lab.miguelmota.com/ethnotary"><img src="" width="900" /></a>
+<a href="https://lab.miguelmota.com/ethnotary"><img src="https://user-images.githubusercontent.com/168240/49712732-a8f7ad80-fbfa-11e8-858a-238989c485db.png" width="900" /></a>
 
 # Demo
 
