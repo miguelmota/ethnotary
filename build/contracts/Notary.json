@@ -6707,6 +6707,12 @@
     "version": "0.4.23+commit.124ca40d.Emscripten.clang"
   },
   "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0xFb42128dA0eA8cF64A1339dBeFcB4B284bE09A07",
+      "transactionHash": "0x3acead57611c797be7fa7a3bbeb889a6111cb977d336a4901efa65bd056830c5"
+    },
     "1547359187239": {
       "events": {},
       "links": {},
@@ -6733,7 +6739,7 @@
     }
   },
   "schemaVersion": "3.0.0-beta.2",
-  "updatedAt": "2019-01-13T06:33:59.703Z",
+  "updatedAt": "2019-01-13T07:37:31.111Z",
   "devdoc": {
     "methods": {
       "transferOwnership(address)": {

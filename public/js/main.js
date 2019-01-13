@@ -14,10 +14,14 @@ const source = require('../../build/contracts/Notary.json')
 
 let instance = null
 let account = null
+let network = 'localhost' // default
 
-let network = 'localhost'
 let addresses = {
-  localhost: '0xFb42128dA0eA8cF64A1339dBeFcB4B284bE09A07'
+  localhost: '0xFb42128dA0eA8cF64A1339dBeFcB4B284bE09A07',
+  rinkeby: '0xFb42128dA0eA8cF64A1339dBeFcB4B284bE09A07',
+  kovan: '',
+  ropsten: '',
+  mainnet: ''
 }
 
 /**
@@ -47,13 +51,23 @@ async function init () {
   // wait for web3 to load
   await wait(1000)
 
-  const {id:netId, type:netType} = await detectNetwork(getProvider())
-  if (netType === 'unknown') {
+  const {id:netId} = await detectNetwork(getProvider())
+  if (netId == 1) {
+      network = 'mainnet'
+  } else if (netId == 42) {
+      network = 'kovan'
+  } else if (netId == 3) {
+      network = 'ropsten'
+  } else if (netId == 4) {
+      network = 'rinkeby'
+  } else {
     network = 'localhost'
   }
 
-  if (network != 'localhost') {
-    alert('Connect to localhot')
+  const allowedNetworks = Object.keys(addresses).filter(x => addresses[x])
+
+  if (allowedNetworks.indexOf(network) === -1) {
+    alert('Unsupported network. Supported networks: ' + allowedNetworks.join(', '))
   }
 
   provider = getProvider()
@@ -62,8 +76,10 @@ async function init () {
   contractAddress = addresses[network]
 
   document.querySelector('#networkType').innerHTML = network
-  //document.querySelector('#etherscanLink').style.display = 'inline-block'
-  //document.querySelector('#etherscanLink').href = `https://${network === 'mainnet' ? '' : `${network}.`}etherscan.io/address/${contractAddress}`
+  if (network !== 'localhost') {
+    document.querySelector('#etherscanLink').style.display = 'inline-block'
+    document.querySelector('#etherscanLink').href = `https://${network === 'mainnet' ? '' : `${network}.`}etherscan.io/address/${contractAddress}`
+  }
 
   instance = await contract.at(contractAddress)
   account = getAccount()

@@ -71,6 +71,34 @@ truffle test
 
 10. Notarize a document!
 
+## Deployment
+
+1. Create a `.env` to export your mnemonic or private key:
+
+  ```bash
+  MNEMONIC='YOU_MNEMONIC_GOES_HERE'
+# or
+  PRIVATE_KEY='YOU_PRIVATE_KEY_GOES_HERE'
+  ```
+
+2. Run truffle deploy using the desired network:
+
+  ```bash
+  truffle deploy --network=rinkeby
+  ```
+
+3. Update the smart contract address in `public/js/main.js`
+
+4. Rebuild frontend scripts:
+
+  ```bash
+  npm run build:client
+  ```
+
+5. Deploy `public/` frontend to your server.
+
+6. Notarize a document!
+
 ## License
 
 [MIT](LICENSE)

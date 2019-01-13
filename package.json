@@ -33,7 +33,9 @@
     "browserify": "^14.5.0",
     "buffer": "^5.0.8",
     "serve": "^10.1.1",
-    "truffle-hdwallet-provider": "git+https://github.com/miguelmota/truffle-hdwallet-provider.git",
+    "truffle": "^5.0.1",
+    "truffle-hdwallet-provider": "^1.0.0-web3one.5",
+    "truffle-privatekey-provider": "^1.0.0",
     "watchify": "^3.9.0",
     "web3-providers-ws": "^1.0.0-beta.37"
   }

@@ -102,6 +102,8 @@ tmp
 secrets.json
 stuff.txt
 server/sqlite.db
+
+# important!
 .env
 
 # Vim files to ignore #
