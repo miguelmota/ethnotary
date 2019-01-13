@@ -18,7 +18,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x01e64725"
     },
     {
       "constant": true,
@@ -32,7 +33,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x8da5cb5b"
     },
     {
       "constant": true,
@@ -51,7 +53,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0xb5872958"
     },
     {
       "constant": false,
@@ -65,7 +68,8 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0xf2fde38b"
     },
     {
       "anonymous": false,
@@ -87,7 +91,8 @@
         }
       ],
       "name": "LogNotarized",
-      "type": "event"
+      "type": "event",
+      "signature": "0xca111dc24ca4691c1b13d5149b57bf1c0377ba900325f349628197d8dd3fef45"
     },
     {
       "anonymous": false,
@@ -104,7 +109,8 @@
         }
       ],
       "name": "OwnershipTransferred",
-      "type": "event"
+      "type": "event",
+      "signature": "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0"
     },
     {
       "constant": false,
@@ -118,7 +124,8 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0xcbef362f"
     },
     {
       "constant": true,
@@ -137,7 +144,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x38a699a4"
     },
     {
       "constant": true,
@@ -156,7 +164,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x51de2f17"
     },
     {
       "constant": true,
@@ -175,7 +184,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0xd45c4435"
     },
     {
       "constant": true,
@@ -194,7 +204,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0xaa513bca"
     },
     {
       "constant": true,
@@ -217,7 +228,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0xcf26b33b"
     },
     {
       "constant": true,
@@ -240,7 +252,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x77d32e94"
     },
     {
       "constant": true,
@@ -267,7 +280,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x39cdde32"
     }
   ],
   "bytecode": "0x608060405260008054600160a060020a033316600160a060020a031990911617905561069d806100306000396000f3006080604052600436106100b95763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166301e6472581146100be57806338a699a4146100f257806339cdde321461011e57806351de2f171461018757806377d32e941461019f5780638da5cb5b146101fd578063aa513bca14610212578063b58729581461022a578063cbef362f14610254578063cf26b33b1461026e578063d45c443514610292578063f2fde38b146102aa575b600080fd5b3480156100ca57600080fd5b506100d66004356102cb565b60408051600160a060020a039092168252519081900360200190f35b3480156100fe57600080fd5b5061010a6004356102e6565b604080519115158252519081900360200190f35b34801561012a57600080fd5b5060408051602060046024803582810135601f810185900485028601850190965285855261010a95833595369560449491939091019190819084018382808284375094975050509235600160a060020a0316935061031492505050565b34801561019357600080fd5b506100d660043561033d565b3480156101ab57600080fd5b5060408051602060046024803582810135601f81018590048502860185019096528585526100d69583359536956044949193909101919081908401838280828437509497506103699650505050505050565b34801561020957600080fd5b506100d661043b565b34801561021e57600080fd5b5061010a60043561044a565b34801561023657600080fd5b5061024260043561047c565b60408051918252519081900360200190f35b34801561026057600080fd5b5061026c60043561048e565b005b34801561027a57600080fd5b5061010a600435600160a060020a0360243516610584565b34801561029e57600080fd5b506102426004356105b6565b3480156102b657600080fd5b5061026c600160a060020a03600435166105d9565b600160205260009081526040902054600160a060020a031681565b6040805191825280516020928190038301902060009081526001909252902054600160a060020a0316151590565b60006103208484610369565b600160a060020a031682600160a060020a03161490509392505050565b6040805191825280516020928190038301902060009081526001909252902054600160a060020a031690565b600080600080845160411415156103835760009350610432565b50505060208201516040830151604184015160ff16601b8110156103a557601b015b8060ff16601b141580156103bd57508060ff16601c14155b156103cb5760009350610432565b60408051600080825260208083018085528a905260ff8516838501526060830187905260808301869052925160019360a0808501949193601f19840193928390039091019190865af1158015610425573d6000803e3d6000fd5b5050506020604051035193505b50505092915050565b600054600160a060020a031681565b604080519182528051602092819003830190206000908152600190925290205433600160a060020a0390811691161490565b60026020526000908152604090205481565b6040805182815290519081900360200190207fc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a4708114156104cd57600080fd5b600081815260016020526040902054600160a060020a0316156104ef57600080fd5b6000818152600260205260409020541561050857600080fd5b6000818152600160209081526040808320805473ffffffffffffffffffffffffffffffffffffffff191633600160a060020a0316908117909155600283529281902042908190558151908152905184927fca111dc24ca4691c1b13d5149b57bf1c0377ba900325f349628197d8dd3fef45928290030190a35050565b604080519283528051602093819003840190206000908152600190935290912054600160a060020a0391821691161490565b604080519182528051602092819003830190206000908152600290925290205490565b60005433600160a060020a039081169116146105f457600080fd5b600160a060020a038116151561060957600080fd5b60008054604051600160a060020a03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a36000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a7230582006efe4ceec0dd857912f1fd7bdd3c3b6ab3c1f1072257715f3675c764c18d2690029",
@@ -2704,20 +2718,20 @@
                       }
                     },
                     {
-                      "sig": {
-                        "declaration": 226,
-                        "isOffset": false,
-                        "isSlot": false,
-                        "src": "1450:3:1",
-                        "valueSize": 1
-                      }
-                    },
-                    {
                       "s": {
                         "declaration": 235,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1466:1:1",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "sig": {
+                        "declaration": 226,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "1450:3:1",
                         "valueSize": 1
                       }
                     },
@@ -5910,20 +5924,20 @@
                       }
                     },
                     {
-                      "sig": {
-                        "declaration": 226,
-                        "isOffset": false,
-                        "isSlot": false,
-                        "src": "1450:3:1",
-                        "valueSize": 1
-                      }
-                    },
-                    {
                       "s": {
                         "declaration": 235,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1466:1:1",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "sig": {
+                        "declaration": 226,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "1450:3:1",
                         "valueSize": 1
                       }
                     },
@@ -6692,9 +6706,34 @@
     "name": "solc",
     "version": "0.4.23+commit.124ca40d.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "1547359187239": {
+      "events": {},
+      "links": {},
+      "address": "0x576664010488BBE4f5Ba184E4C5cE036a4F4756D",
+      "transactionHash": "0x3dd0e4da9867dcd830959e43c9d4de8bfee7b0f92d3f0a3dd27abcab3dcad7cf"
+    },
+    "1547360103777": {
+      "events": {},
+      "links": {},
+      "address": "0x576664010488BBE4f5Ba184E4C5cE036a4F4756D",
+      "transactionHash": "0x3dd0e4da9867dcd830959e43c9d4de8bfee7b0f92d3f0a3dd27abcab3dcad7cf"
+    },
+    "1547360113977": {
+      "events": {},
+      "links": {},
+      "address": "0x576664010488BBE4f5Ba184E4C5cE036a4F4756D",
+      "transactionHash": "0x3dd0e4da9867dcd830959e43c9d4de8bfee7b0f92d3f0a3dd27abcab3dcad7cf"
+    },
+    "1547361227941": {
+      "events": {},
+      "links": {},
+      "address": "0xFb42128dA0eA8cF64A1339dBeFcB4B284bE09A07",
+      "transactionHash": "0x0030e5b4600369a2a9ab6611edbeb54483c42057a6932696ddbcf3a5289019bc"
+    }
+  },
   "schemaVersion": "3.0.0-beta.2",
-  "updatedAt": "2018-12-10T05:43:55.641Z",
+  "updatedAt": "2019-01-13T06:33:59.703Z",
   "devdoc": {
     "methods": {
       "transferOwnership(address)": {

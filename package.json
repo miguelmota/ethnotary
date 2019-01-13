@@ -12,7 +12,8 @@
     "deploy:rinkeby": "truffle migrate --network=rinkeby --reset",
     "deploy:mainnet": "truffle migrate --network=mainnet --reset",
     "watch:client": "watchify -t [babelify] public/js/main.js -o public/dist/bundle.js",
-    "build:client": "browserify -t [babelify] public/js/main.js -o public/dist/bundle.js"
+    "build:client": "browserify -t [babelify] public/js/main.js -o public/dist/bundle.js",
+    "serve": "PORT=3000 serve public/"
   },
   "author": "",
   "license": "MIT",
@@ -31,6 +32,7 @@
     "babelify": "^10.0.0",
     "browserify": "^14.5.0",
     "buffer": "^5.0.8",
+    "serve": "^10.1.1",
     "truffle-hdwallet-provider": "git+https://github.com/miguelmota/truffle-hdwallet-provider.git",
     "watchify": "^3.9.0",
     "web3-providers-ws": "^1.0.0-beta.37"

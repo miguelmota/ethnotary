@@ -198,3 +198,7 @@ p {
   border-left: 4px solid #eaeaea;
   padding-left: 1em;
 }
+
+#etherscanLink {
+  display: none;
+}

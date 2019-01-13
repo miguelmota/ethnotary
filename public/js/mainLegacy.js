@@ -10,14 +10,14 @@ const Buffer = require('buffer/').Buffer
 const Web3WsProvider = require('web3-providers-ws')
 const arrayBufferToBuffer = require('arraybuffer-to-buffer')
 
-const source = require('../../build/contracts/Notary.json')
+const source = require('./NotaryLegacy.json')
 
 let instance = null
 let account = null
 
-let network = 'localhost'
 let addresses = {
-  localhost: '0xFb42128dA0eA8cF64A1339dBeFcB4B284bE09A07'
+  mainnet: '0xd749c968399b8cbdf2ce95d1f87c1c38157c579a',
+  rinkeby: '0x3b41bc65821962b9ac60c8151ba0ae593e4e3078'
 }
 
 /**
@@ -41,6 +41,8 @@ async function onLoad () {
   }
 }
 
+let network = 'mainnet'
+
 async function init () {
   contract = tc(source)
 
@@ -48,12 +50,10 @@ async function init () {
   await wait(1000)
 
   const {id:netId, type:netType} = await detectNetwork(getProvider())
-  if (netType === 'unknown') {
-    network = 'localhost'
-  }
-
-  if (network != 'localhost') {
-    alert('Connect to localhot')
+  if (!(netType === 'mainnet' || netType === 'rinkeby')) {
+    alert('Only Mainnet or Rinkeby Testnet is currently supported')
+  } else {
+    network = netType
   }
 
   provider = getProvider()
@@ -62,8 +62,7 @@ async function init () {
   contractAddress = addresses[network]
 
   document.querySelector('#networkType').innerHTML = network
-  //document.querySelector('#etherscanLink').style.display = 'inline-block'
-  //document.querySelector('#etherscanLink').href = `https://${network === 'mainnet' ? '' : `${network}.`}etherscan.io/address/${contractAddress}`
+  document.querySelector('#etherscanLink').href = `https://${network === 'mainnet' ? '' : `${network}.`}etherscan.io/address/${contractAddress}`
 
   instance = await contract.at(contractAddress)
   account = getAccount()
@@ -194,12 +193,12 @@ async function stampDoc (hash) {
     const exists = await instance.exists(hash, {from: account})
 
     if (exists) {
-      alert('This document already exists as being notarized')
+      alert('This document already exists as being stamped')
       return false
     }
 
-    const value = await instance.notarize(hash, {from: account})
-    alert('Successfully notarized document')
+    const value = await instance.stamp(hash, {from: account})
+    alert('Successfully stamped document')
   } catch (error) {
     alert(error)
   }
@@ -246,7 +245,7 @@ async function handleCheckForm (event) {
   }
 
   try {
-    const stamper = await instance.getNotarizer(hash, {from: account})
+    const stamper = await instance.getStamper(hash, {from: account})
     const timestamp = await instance.getTimestamp(hash, {from: account})
     const date = moment.unix(timestamp).format('YYYY-MM-DD hh:mmA')
 
@@ -285,7 +284,7 @@ async function handleGenSigForm (event) {
     return false
   }
 
-  const stamper = await instance.getNotarizer(hash, {from: account})
+  const stamper = await instance.getStamper(hash, {from: account})
 
   if (stamper !== account) {
     alert('You are not the stamper of this document')
@@ -329,7 +328,7 @@ async function handleVerifySigForm (event) {
     return false
   }
 
-  const addr = await instance.getNotarizer(hash)
+  const addr = await instance.getStamper(hash)
   const isSigner = await instance.ecverify(hash, sig, addr, {from: account})
 
   let output = `<span class="red">✘ ${addr} <strong>IS NOT</strong> signer of ${hash}</span>`
