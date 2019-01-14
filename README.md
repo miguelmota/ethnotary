@@ -28,42 +28,42 @@ truffle test
 
 1. Clone repository:
 
-  ```bash
-  git clone git@github.com:miguelmota/ethnotary.git
-  cd ethnotary
-  ```
+    ```bash
+    git clone git@github.com:miguelmota/ethnotary.git
+    cd ethnotary
+    ```
 
 2. Install dependencies:
 
-  ```bash
-  npm install
-  ```
+    ```bash
+    npm install
+    ```
 
 3. Start [ganache](https://github.com/trufflesuite/ganache) in a seperate terminal:
 
-  ```bash
-  ganche-cli
-  ```
+    ```bash
+    ganche-cli
+    ```
 
 4. Deploy contract to local testnet:
 
-  ```bash
-  truffle deploy
-  ```
+    ```bash
+    truffle deploy
+    ```
 
 5. Start frontend watcher in another terminal:
 
-  ```bash
-  npm run watch:client
-  ```
+    ```bash
+    npm run watch:client
+    ```
 
 6. Update the smart contract address in `public/js/main.js`
 
 7. Start frontend server:
 
-  ```bash
-  npm run serve
-  ```
+    ```bash
+    npm run serve
+    ```
 
 8. Visit [http://localhost:3000/](http://localhost:3000/)
 
@@ -75,25 +75,25 @@ truffle test
 
 1. Create a `.env` to export your mnemonic or private key:
 
-  ```bash
-  MNEMONIC='YOU_MNEMONIC_GOES_HERE'
-# or
-  PRIVATE_KEY='YOU_PRIVATE_KEY_GOES_HERE'
-  ```
+    ```bash
+    MNEMONIC='YOU_MNEMONIC_GOES_HERE'
+    # or
+    PRIVATE_KEY='YOU_PRIVATE_KEY_GOES_HERE'
+    ```
 
 2. Run truffle deploy using the desired network:
 
-  ```bash
-  truffle deploy --network=rinkeby
-  ```
+    ```bash
+    truffle deploy --network=rinkeby
+    ```
 
 3. Update the smart contract address in `public/js/main.js`
 
 4. Rebuild frontend scripts:
 
-  ```bash
-  npm run build:client
-  ```
+    ```bash
+    npm run build:client
+    ```
 
 5. Deploy `public/` frontend to your server.
 
