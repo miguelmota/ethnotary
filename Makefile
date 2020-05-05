@@ -4,12 +4,12 @@ all: build
 build:
 	@truffle migrate
 
-.PHONY: build/client
-build/client:
+.PHONY: build-client
+build-client:
 	@npm run build:client
 
-.PHONY: start/testrpc
-start/testrpc:
+.PHONY: start-testrpc
+start-testrpc:
 	@ganache-cli -m "dress rate excess hurry drastic saddle notice yard urban fat army sort"
 
 .PHONY: deploy
